@@ -39,7 +39,7 @@ function colorChosen(color) {
 // brushChosen -- react to user chosing a brush
 //
 function brushChosen(brush) {
-	// brush 1 is special, it is the eraser
+	// brush 0 is special, it is the eraser
 	if (brush == 0) {
 		simpleDrawState.erasing = true;
 		simpleDrawState.draw.setDrawWidth(24);
@@ -397,7 +397,7 @@ function simpleDraw(selector) {
 
 	simpleDrawState.draw = new Draw('#draw');
 	colorChosen($('#color0 span').css('background-color'));
-	brushChosen(5);
+	brushChosen(3);
 
 	$(window).resize(function() {
 		resizeHandler();
